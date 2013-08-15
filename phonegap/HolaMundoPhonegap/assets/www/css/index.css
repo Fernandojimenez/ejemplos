@@ -1,0 +1,16 @@
+.indexTitle{
+	text-align: center;
+	font-family: cursive;
+	color: red;
+}
+
+.green{
+	font-size: 1em;
+	color: green;
+}
+
+.big{
+	font-size: 5em;
+	padding: 10px;
+	color: blue;
+}
