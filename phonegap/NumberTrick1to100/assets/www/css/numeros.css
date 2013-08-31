@@ -1,0 +1,21 @@
+.numbers{
+	font-size: 1.5em;
+	padding: 10px 10% 10px 10%;
+}
+
+.question{
+	padding: 10px 20% 10px 20%
+}
+
+.showNumber{
+	color: green;
+	font-size: 40px;
+}
+.showNumberRed{
+	color: red;
+	font-size: 40px;
+	padding: 2% 10% 2% 10%;
+}
+.yournumberis{
+	padding: 2% 10% 2% 10%;
+}
