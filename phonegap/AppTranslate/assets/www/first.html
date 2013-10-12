@@ -1,0 +1,11 @@
+<!-- Contenido a sustituir del id de inicio.html "contentToChangeDifferentPages" -->
+<div>
+	<p id="pContentFirstPage"></p>
+	<input type="button" id="buttonGoToSecond" onclick="goToPageChangeDiv('second.html')"></input>	
+</div>
+<script>
+	/*Traducciones mediante JQuery $ - ir a Messages para ver traducciones*/
+	//Etiquetas de first identificadas por id
+	$("#pContentFirstPage").html($.i18n.prop('first.p'));
+	$("#buttonGoToSecond").attr("value", $.i18n.prop('first.button'));
+</script>

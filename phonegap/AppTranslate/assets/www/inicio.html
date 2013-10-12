@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	    <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/stylesApp.css" />
+		<script type="text/javascript" src="resources/cordova.js"></script>
+		<script type="text/javascript" src="resources/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="resources/jquery.i18n.properties-1.0.9.js"></script>
+		<script type="text/javascript" src="resources/utils.js"></script>
+		<script>loadLanguageDevice();</script>
+	</head>
+	
+	<!-- Template html head body header divChangeBetweenPages footer -->
+	<body>
+		<div id="header">
+			<h1 id="myHeader"></h1>
+			<p id="testPmyHeader"></p>
+		</div>
+		<hr />
+		
+		<!-- This is the div who change between pages first and second -->
+		<div id="contentToChangeDifferentPages"></div>
+		
+		<hr />
+		<div id="footer">
+			<h3 id="myFooter"></h3>
+		</div>
+		
+		<script>
+			/*Traducciones mediante JQuery $ - ir a Messages para ver traducciones*/
+			//Etiquetas de header identificadas por id
+			$("#myHeader").html($.i18n.prop('header.h1'));
+			$("#testPmyHeader").html($.i18n.prop('header.parrafo'));
+			//Etiquetas de footer mediante su id
+			$("#myFooter").html($.i18n.prop('footer.h3'));
+
+			$('#linkToFirstPage').click(function(){
+				goToPageChangeDiv("first.html");
+			});
+
+			goToPageChangeDiv('first.html');
+		</script>
+	</body>
+</html>
