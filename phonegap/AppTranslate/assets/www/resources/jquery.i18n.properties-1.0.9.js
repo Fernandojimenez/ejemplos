@@ -51,7 +51,7 @@ $.i18n.properties = function(settings) {
         name:           'Messages',
         language:       '',
         path:           'messages/',  
-        mode:           'vars',
+        mode:           'both',
         cache:			false,
         encoding:       'UTF-8',
         callback:       null

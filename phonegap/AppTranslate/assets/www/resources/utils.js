@@ -23,12 +23,14 @@ function loadLanguageDevice() {
 		}
 		lang = lang.substr(0, 2);
 	}
-
+	
 	jQuery.i18n.properties({
 		name : 'Messages',
 		path : 'messages/',
 		mode : 'both',
-		language : lang
+		language : lang,
+		callback: function() {
+	    }
 	});
 }
 
