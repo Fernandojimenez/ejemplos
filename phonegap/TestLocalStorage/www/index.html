@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app>
+  	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="todo.css">
+	    <script src="https://code.jquery.com/jquery.js"></script>
+	    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	    <script src="todo.js"></script>
+  	</head>
+  	<body>
+	    <div class="panel panel-default" ng-controller="TodoCtrl">
+			<!-- Default panel contents -->
+			<div class="panel-heading"><span>Faltan {{remaining()}} de {{todos.length}} tareas por realizar</span> [ <a href="" ng-click="archive()">Archivar</a> ]</div>
+			  <!-- List group -->
+			  <ul class="list-group">
+			    <li class="list-group-item" ng-repeat="todo in todos">
+			    	<input type="checkbox" ng-model="todo.done"> <span class="done-{{todo.done}}">{{todo.text}}</span>
+	        	</li>
+			  </ul>
+    		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    			<form ng-submit="addTodo();">
+	        		<input type="text" ng-model="todoText" size="30" placeholder="Introduce tareas..." required>
+	        		<input class="btn-primary" type="submit" value="add">
+	      		</form>
+    		</nav>
+    	</div>
+  	</body>
+</html>
